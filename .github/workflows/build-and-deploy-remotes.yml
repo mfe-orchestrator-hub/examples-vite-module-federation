@@ -60,6 +60,6 @@ jobs:
       uses: mfe-orchestrator-hub/github-action@0.0.5
       with:
         apikey: ${{ secrets.MICROFRONTEND_ORCHESTRATOR_API_KEY }}
-        microfrontend-slug: 'remote'
+        microfrontend-slug: 'first-mfe'
         file-path: './dist'
         version: ${{ github.ref_name }}
