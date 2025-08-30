@@ -61,5 +61,5 @@ jobs:
       with:
         apikey: ${{ secrets.MICROFRONTEND_ORCHESTRATOR_API_KEY }}
         microfrontend-slug: 'first-mfe'
-        file-path: './dist'
+        file-path: './remote/dist'
         version: ${{ github.ref_name }}
