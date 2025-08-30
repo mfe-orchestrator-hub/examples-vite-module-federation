@@ -57,7 +57,7 @@ jobs:
       run: pnpm build
                 
     - name: 🚀 Publish to MFE Orchestrator
-      uses: mfe-orchestrator-hub/github-action@0.0.14
+      uses: mfe-orchestrator-hub/github-action@0.0.15
       with:
         apikey: ${{ secrets.MICROFRONTEND_ORCHESTRATOR_API_KEY }}
         microfrontend-slug: 'first-mfe'
