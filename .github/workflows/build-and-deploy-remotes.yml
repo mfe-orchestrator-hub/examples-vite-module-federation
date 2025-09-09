@@ -5,6 +5,13 @@ on:
     tags:
       - '*'  # This will match tags starting with 'v' (e.g., v1.0.0)
 
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        type: string
+        description: 'Version to release'
+
 jobs:
   build-and-deploy-remotes:
     runs-on: ubuntu-latest
@@ -62,4 +69,4 @@ jobs:
         apikey: ${{ secrets.MICROFRONTEND_ORCHESTRATOR_API_KEY }}
         microfrontend-slug: 'first-mfe'
         file-path: './remote/dist'
-        version: ${{ github.ref_name }}
+        version: ${{ inputs.version || github.ref_name }}
